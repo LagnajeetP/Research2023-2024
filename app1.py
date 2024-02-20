@@ -41,15 +41,7 @@ st.image(image, use_column_width=True)
 
 # Page title
 st.markdown("""
-# Bioactivity Prediction App (Acetylcholinesterase)
-
-This app allows you to predict the bioactivity towards inhibting the `Acetylcholinesterase` enzyme. `Acetylcholinesterase` is a drug target for Alzheimer's disease.
-
-**Credits**
-- App built in `Python` + `Streamlit` by [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor))
-- Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) [[Read the Paper]](https://doi.org/10.1002/jcc.21707).
----
-""")
+# Bioactivity Prediction App (SARS Coronavirus 3C-like protinase""")
 
 # Sidebar
 with st.sidebar.header('1. Upload your CSV data'):
@@ -76,7 +68,7 @@ if st.sidebar.button('Predict'):
 
     # Read descriptor list used in previously built model
     st.header('**Subset of descriptors from previously built models**')
-    Xlist = list(pd.read_csv('descriptor_list.csv').columns)
+    Xlist = list(pd.read_csv('coronavirusdatasetprocessed.csv').columns)
     desc_subset = desc[Xlist]
     st.write(desc_subset)
     st.write(desc_subset.shape)
